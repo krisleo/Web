@@ -5,8 +5,8 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
     <title>抽奖界面</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/wall.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/wall.css">
     <style type="text/css">
         body, html {
             width: 100%;
@@ -158,10 +158,10 @@
                'button-success': running}">{{running?'停!':'开始'}}</button>
     <button class="pure-button button-warning" @click="reset">重置</button>
 </div>
-<script type="text/javascript" src="js/zepto.js"></script>
-<script type="text/javascript" src="js/vue.js"></script>
-<script type="text/javascript" src="js/tagcanvas.js"></script>
-<script type="text/javascript" src="js/member.js"></script>
+<script type="text/javascript" src="../../assets/js/zepto.js"></script>
+<script type="text/javascript" src="../../assets/js/vue.js"></script>
+<script type="text/javascript" src="../../assets/js/tagcanvas.js"></script>
+<script type="text/javascript" src="../../assets/js/member.js"></script>
 <script type="text/javascript">
     (function(){
         var choosed = JSON.parse(localStorage.getItem('choosed')) || {};

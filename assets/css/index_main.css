@@ -2276,6 +2276,7 @@
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+		left: 5%;
 	}
 
 		input[type="submit"]:hover,

@@ -5,8 +5,8 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
     <title>年会抽奖小程序</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/wall.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/wall.css">
     <style type="text/css">
         .wall { 
             overflow: scroll;
@@ -34,14 +34,14 @@
             line-height: 50px;
             margin-top: 50px;
             margin-bottom: 50px;
-            font-family: '幼圆';
+            font-family: '幼圆',serif;
         }
         .result-title {
             text-align: center;
             color: #4de7c8;
             font-size: 40px;
             margin-top: 100px;
-            font-family: '幼圆';
+            font-family: '幼圆',serif;
         }
 
     </style>
@@ -55,7 +55,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="../../assets/js/vue.js"></script>
 <script type="text/javascript">
     new Vue({
         el: '#main',
@@ -63,9 +63,9 @@
             results: []
         },
         mounted () {
-            let vm = this
-            let locals = window.localStorage
-            let str_results = []
+            let vm = this;
+            let locals = window.localStorage;
+            let str_results = [];
             // 遍历(排除choosed)
             for(let i = 0; i<localStorage.length; i++){
                 if (localStorage.key(i) !== 'choosed') {
@@ -73,15 +73,15 @@
                 }
             }
             // 分割每个string, 并将</br>换成空格
-            let results = []
+            let results = [];
             for(let nameList of str_results) {
-                let temp = JSON.parse(nameList)
-                temp = temp.map(item => {return item.replace('<br/>', ' ')})
+                let temp = JSON.parse(nameList);
+                temp = temp.map(item => {return item.replace('<br/>', ' ')});
                 results.push(temp)
             }
             
             // 根据长度进行排序，名单短的放在前面
-            results = results.sort((x, y) => { return x.length - y.length;})
+            results = results.sort((x, y) => { return x.length - y.length;});
             this.results = results
         },
     })
