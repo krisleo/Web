@@ -1,5 +1,0 @@
-
-function transJson(str)
-{
-    
-}
