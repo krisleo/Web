@@ -9,39 +9,37 @@
 		<title>注册</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/sass/main.scss">
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><script src="../../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../../assets/css/login_main.css" />
+		<link rel="stylesheet" href="../../assets/sass/main.scss">
+		<!--[if lte IE 8]><link rel="stylesheet" href="../../assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="../../assets/css/ie9.css" /><![endif]-->
 			<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-			<script src="assets/js/md5.js"></script>
-			<script src="assets/js/check.js"></script>
-			<script src="assets/js/main.js"></script>
-		<script src="assets/js/signUp_check.js"></script>
+			<script src="../../assets/js/md5.js"></script>
+			<script src="../../assets/js/check.js"></script>
+			<script src="../../assets/js/login_main.js"></script>
+		<script src="../../assets/js/signUp_check.js"></script>
 	</head>
 	<body>
 
 		<!-- Header -->
 			<header id="header">
-				<a href="../main/home.html" class="button active" style="float:right; text-align:right;">回到首页</a>
+				<a href="../home.html" class="button active" style="float:right; text-align:right;">回到首页</a>
 				<h1>注册</h1>
 				<div id="div1" style="text-align: center;display:none;
 				z-index:100;position:absolute;left:45%;top: 45%">注册成功!</div>
 				<p>请输入邮箱:
 				<form id="signup-form" method="post" action="#">
 				<ul style="list-style: none">
-					<li><input type="text" name="id" id="id" placeholder="账号" /></li>
-					<li><p>请输入密码：</p></li>
-					<li><input type="password" name="password" id="password1" placeholder="密码" /></li>
+					<li><label for="id"></label><input type="text" name="id" id="id" placeholder="账号" /></li>
+					<li><p>请输入密码：</p>
+					<li><label for="password1"></label><input type="password" name="password" id="password1" placeholder="密码" /></li>
 					<li><p>请确认密码：</p></li>
-					<li><input type="password" name="password" id="password2" placeholder="密码" /></li>
+					<li><label for="password2"></label><input type="password" name="password" id="password2" placeholder="密码" /></li>
 					<li><br></li>
 					<li><input type="submit" value="确定" class="button special" onclick="signUp_check()"/>
-						<a href="登录.html" class="button">已有账户?登录</a>
+						<a href="log_in.html" class="button">已有账户?登录</a>
 					</li>
-				</ul>
-				</form>
 			</header>
 
 		<!-- Signup Form -->
@@ -54,8 +52,8 @@
 			</footer>
 
 		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+			<!--[if lte IE 8]><script src="../../assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../../assets/js/login_main.js"></script>
 
 	</body>
 </html>

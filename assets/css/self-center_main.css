@@ -71,19 +71,19 @@
 		text-align: center;
 	}
 	#sig{
-		background-image: url("../../images/thumbs/04.jpg") ;
+		background-image: url("../images/thumbs/04.jpg") ;
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: 0 0 ;
 	}
 	#password{
-		background-image: url("../../images/thumbs/05.jpg") ;
+		background-image: url("../images/thumbs/05.jpg") ;
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: 0 0 ;
 	}
 	#info{
-		background-image: url("../../images/bg.jpg") ;
+		background-image: url("../images/bg.jpg") ;
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: 0 0 ;
