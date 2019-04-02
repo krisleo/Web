@@ -13,6 +13,12 @@ $("#sendMessage").click(function () {
     let bar = $("#"+consumer);
     bar.css("top",ran);
     bar.animate({right:'100%'}, 12000);
+    let first = document.getElementById("first");
+    let second = document.getElementById("second");
+    let third = document.getElementById("third");
+    third.innerHTML = second.innerHTML;
+    second.innerHTML = first.innerHTML;
+    first.innerHTML = consumer + ":" + a.value;
     a.value = "";
     setTimeout(function(){$("p").remove("#consumer");},10000);
 });
