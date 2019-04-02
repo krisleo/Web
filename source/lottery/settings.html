@@ -10,7 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="../../assets/js/ie/html5shiv.js"></script><![endif]-->
-
+		<link rel="stylesheet" href="../../assets/css/materialize.min.css"/>
+		<link rel="stylesheet" href="../../assets/css/materialdesignicons.min.css"/>
 		<link rel="stylesheet" href="../../assets/css/hall_main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="../../assets/css/ie8.css" /><![endif]-->
 	</head>
@@ -19,21 +20,108 @@
 			<div id="content">
 				<div class="inner">
 					<!-- Post -->
-						<article class="box post post-excerpt">
-							<header>
-								<h2>公共房间</h2>
-							</header>
-							<img src="../../assets/images/pic01.jpg" alt="" class="image featured"/>
-						</article>
+					<header>
+						<div class="nav-content" style="background-color: #FFFFFF;height: 30px">
+							<div class="col s8" style="padding-left: 150px;">
+								<ul class="tabs tabs-transparent" style="width: 100%; clear: left">
+									<a class="button"  href="#person-set" style="width: 20% ;float: left">人员设置</a>
+									<a class="button" href="#prize-set"style="width: 20% ;float: left">奖项设置</a>
+									<a class="button" href="#style-theme"style="width: 20% ;float: left">方式背景</a>
+									<a class="button" href="#lottery" style="width:20%; float: left">抽奖</a>
+								</ul>
+							</div>
+						</div>
+					</header>
+					<section >
+						<div class="row main" style="margin: 0px;">
+							<div class="card-panel col s8" id="setting-panel" style="width: 100%; margin-left: 0px; height: 100%; overflow-y: auto;">
+								<div id="person-set">
+									<div class="row" style="margin-bottom: 100px;margin-left: 20px">
+										<form class="col s12" style="margin-top: 100px; margin-bottom: 20px;">
+											<div class="col s4" style="margin: 10px; padding: 0px;">
+												<a class="button" onclick="$('#add').click();">导入人员文件</a>
+											</div>
+										</form>
+									</div>
 
-					<!-- Post -->
-						<article class="box post post-excerpt">
-							<header>
-								<hr>
-								<h2>我的房间</h2>
-							</header>
-							<img src="../../assets/images/pic01.jpg" alt="" class="image featured"/></a>
-						</article>					
+								</div>
+								<div id="prize-set" class="col s12" >
+									<div class="row" style="margin-top: 10px;">
+										<div class="col s4">
+											<div class="row" style="margin-bottom: 0px;margin-left: 10px">
+												<div class="col s12 table-header" style="padding-left: 20px;">
+													<p class="header">奖项列表添加</p>
+												</div>
+												<div class="col s12 table-adder">
+													<input type="button" value="+" style="background-color: #1fcaa7 ">
+												</div>
+											</div>
+											<div class="prize-list col s12">
+												<table class="" cellspacing="0">
+
+													<tbody id="prize-list-body"></tbody>
+												</table>
+											</div>
+										</div>
+										<div class="col s4">
+											<div class="row" style="margin-bottom: 0px;margin-left: 10px">
+												<div class="col s12 table-header" style="padding-left: 20px;">
+													<p class="header">奖品列表添加</p>
+												</div>
+												<div class="col s12 table-adder">
+													<input type="button" value="+" style="background-color: #1fcaa7 ">
+												</div>
+											</div>
+											<div class="prize-list col s12">
+												<table class="" cellspacing="0">
+
+													<tbody id="prize-list-body"></tbody>
+												</table>
+											</div>
+										</div>
+										<div class="col s4">
+											<div class="row" style="margin-bottom: 0px;margin-left: 10px">
+												<div class="col s12 table-header" style="padding-left: 20px;">
+													<p class="header">概率添加</p>
+												</div>
+												<div class="col s12 table-adder">
+													<input type="button" value="+" style="background-color: #1fcaa7 ">
+												</div>
+											</div>
+											<div class="prize-list col s12">
+												<table class="" cellspacing="0">
+													<tbody id="prize-list-body"></tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="style-theme">
+									<div class="row">
+										<form class="col s12" style="margin-top: 20px; margin-bottom: 0px;margin-left: 100px">
+											<div class="row">
+												<div class="input-field col s6">
+													<label class="active">抽奖方式</label>
+													<select>
+														<option value="1">随机抽奖</option>
+														<option value="2">转盘</option>
+													</select>
+												</div>
+
+											</div>
+
+											<div class="input-field col s6">
+												<div class="col s12"><a class="button" href="../lottery/index.html" onclick="$('#add').click();">导入背景图片</a>
+												</div>
+										</form>
+									</div>
+								</div>
+								<div class="col s12"><a class="button" href="../lottery/index.html" >抽奖开始</a>
+								</div>
+
+							</div>
+						</div>
+					</section>
 				</div>
 			</div>
 
@@ -57,9 +145,7 @@
 					<section class="box text-style1">
 						<h2><strong>发弹幕</strong></h2>
 						<form method="post" action="#">
-							<label>
-								<input type="text" class="text" name="send" />
-							</label>
+							<input type="text" class="text" name="send" />
 						</form>
 						<button type="submit" id="sendMessage">发送</button>
 					</section>
@@ -92,8 +178,8 @@
 							<h2>最新弹幕</h2>
 						</header>
 						<ul>
-							<li>*一平:	哇！昭哥好帅啊！</li>
-							<li>*嘉辉:	居然还有路虎揽胜。。。</li>
+							<li>*一平:	哇！昭哥好帅啊！</a></li>
+							<li>*嘉辉:	居然还有路虎揽胜。。。</a></li>
 							<li>*新海:	只差一点就中奖了，气</li>
 						</ul>
 					</section>
@@ -110,6 +196,7 @@
 			<script src="../../assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="../../assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="../../assets/js/hall_main.js"></script>
+			<script src="../../assets/js/setting.js"></script>
 
 	</body>
 </html>
