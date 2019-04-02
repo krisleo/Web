@@ -3818,21 +3818,25 @@
 	#logIn{
 		position: relative;
 		left: 1200px;
+		top: 5px;
 	}
 
 	#logOut{	
 		position: relative;
 		left: 1200px;
+		top: 5px;
 	}
 
 	#signUp{
 		position: relative;
 		left: 950px;
+		top: 5px;
 	}
 
 	#hall{
 		position: relative;
 		left: 950px;
+		top: 5px;
 	}
 	
 	#downLoad{
