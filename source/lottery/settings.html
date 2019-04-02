@@ -6,197 +6,53 @@
 -->
 <html>
 	<head>
-		<title>大厅</title>
+		<title>设置</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="../../assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="../../assets/css/materialize.min.css"/>
 		<link rel="stylesheet" href="../../assets/css/materialdesignicons.min.css"/>
 		<link rel="stylesheet" href="../../assets/css/hall_main.css" />
+		<link rel="stylesheet" href="../../assets/css/materialdesignicons.min.css"/>
+		<link rel="stylesheet" href="../../assets/css/materialize.min.css"/>
 		<!--[if lte IE 8]><link rel="stylesheet" href="../../assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body>
 		<!-- Content -->
-			<div id="content">
-				<div class="inner">
-					<!-- Post -->
-					<header>
-						<div class="nav-content" style="background-color: #FFFFFF;height: 30px">
-							<div class="col s8" style="padding-left: 150px;">
-								<ul class="tabs tabs-transparent" style="width: 100%; clear: left">
-									<a class="button"  href="#person-set" style="width: 20% ;float: left">人员设置</a>
-									<a class="button" href="#prize-set"style="width: 20% ;float: left">奖项设置</a>
-									<a class="button" href="#style-theme"style="width: 20% ;float: left">方式背景</a>
-									<a class="button" href="#lottery" style="width:20%; float: left">抽奖</a>
-								</ul>
-							</div>
-						</div>
-					</header>
-					<section >
-						<div class="row main" style="margin: 0px;">
-							<div class="card-panel col s8" id="setting-panel" style="width: 100%; margin-left: 0px; height: 100%; overflow-y: auto;">
-								<div id="person-set">
-									<div class="row" style="margin-bottom: 100px;margin-left: 20px">
-										<form class="col s12" style="margin-top: 100px; margin-bottom: 20px;">
-											<div class="col s4" style="margin: 10px; padding: 0px;">
-												<a class="button" onclick="$('#add').click();">导入人员文件</a>
-											</div>
-										</form>
-									</div>
-
-								</div>
-								<div id="prize-set" class="col s12" >
-									<div class="row" style="margin-top: 10px;">
-										<div class="col s4">
-											<div class="row" style="margin-bottom: 0px;margin-left: 10px">
-												<div class="col s12 table-header" style="padding-left: 20px;">
-													<p class="header">奖项列表添加</p>
-												</div>
-												<div class="col s12 table-adder">
-													<input type="button" value="+" style="background-color: #1fcaa7 ">
-												</div>
-											</div>
-											<div class="prize-list col s12">
-												<table class="" cellspacing="0">
-
-													<tbody id="prize-list-body"></tbody>
-												</table>
-											</div>
-										</div>
-										<div class="col s4">
-											<div class="row" style="margin-bottom: 0px;margin-left: 10px">
-												<div class="col s12 table-header" style="padding-left: 20px;">
-													<p class="header">奖品列表添加</p>
-												</div>
-												<div class="col s12 table-adder">
-													<input type="button" value="+" style="background-color: #1fcaa7 ">
-												</div>
-											</div>
-											<div class="prize-list col s12">
-												<table class="" cellspacing="0">
-
-													<tbody id="prize-list-body"></tbody>
-												</table>
-											</div>
-										</div>
-										<div class="col s4">
-											<div class="row" style="margin-bottom: 0px;margin-left: 10px">
-												<div class="col s12 table-header" style="padding-left: 20px;">
-													<p class="header">概率添加</p>
-												</div>
-												<div class="col s12 table-adder">
-													<input type="button" value="+" style="background-color: #1fcaa7 ">
-												</div>
-											</div>
-											<div class="prize-list col s12">
-												<table class="" cellspacing="0">
-													<tbody id="prize-list-body"></tbody>
-												</table>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div id="style-theme">
-									<div class="row">
-										<form class="col s12" style="margin-top: 20px; margin-bottom: 0px;margin-left: 100px">
-											<div class="row">
-												<div class="input-field col s6">
-													<label class="active">抽奖方式</label>
-													<select>
-														<option value="1">随机抽奖</option>
-														<option value="2">转盘</option>
-													</select>
-												</div>
-
-											</div>
-
-											<div class="input-field col s6">
-												<div class="col s12"><a class="button" href="../lottery/index.html" onclick="$('#add').click();">导入背景图片</a>
-												</div>
-										</form>
-									</div>
-								</div>
-								<div class="col s12"><a class="button" href="../lottery/index.html" >抽奖开始</a>
-								</div>
-
-							</div>
-						</div>
-					</section>
-				</div>
+		<div id="setting">
+			<header>
+				<a class="button" onclick="set_person()">人员设置</a>
+				<a class="button" onclick="set_prize()">奖项设置</a>
+				<a class="button" onclick="set_bg()">方式背景</a>
+				<a class="button" onclick="start()">抽奖</a>
+			</header>
+			<div id="person-set" style="z-index: 3;position: absolute;left: 5%;">
+				<button class="button">导入人员文件</button>
 			</div>
-
-		<!-- Sidebar -->
-			<div id="sidebar">
-
-				<!-- Logo -->
-					<h1 id="hottory">HOTTERY</h1>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="../logged/hall.html">大厅首页</a></li>
-							<li class="current"><a href="settings.html">设置</a></li>
-							<li><a href="../logged/room.html">进入房间</a></li>
-							<li><a href="../self-center/index.html">个人中心</a></li>
-						</ul>
-					</nav>
-
-				<!-- Send -->
-					<section class="box text-style1">
-						<h2><strong>发弹幕</strong></h2>
-						<form method="post" action="#">
-							<input type="text" class="text" name="send" />
-						</form>
-						<button type="submit" id="sendMessage">发送</button>
-					</section>
-
-				<!-- Text -->
-					<section class="box text-style1">
-						<div class="inner">
-							<p>
-								<strong>Tips:</strong> <br />如果弹幕太多，可以点击下面的按钮关闭呦 
-							</p>
-							<button type="button">关闭弹幕</button>
-						</div>
-					</section>
-
-				<!-- Recent Posts -->
-					<section class="box recent-posts">
-						<header>
-							<h2>最新中奖信息</h2>
-						</header>
-						<ul>
-							<li>恭喜 *文辉 喜提路虎揽胜一辆</li>
-							<li>恭喜 *林泽 喜提Macbook Pro一个</li>
-							<li>恭喜 *岳江 喜提GUCCI皮带一条</li>
-						</ul>
-					</section>
-
-				<!-- Recent Comments -->
-					<section class="box recent-comments">
-						<header>
-							<h2>最新弹幕</h2>
-						</header>
-						<ul>
-							<li>*一平:	哇！昭哥好帅啊！</a></li>
-							<li>*嘉辉:	居然还有路虎揽胜。。。</a></li>
-							<li>*新海:	只差一点就中奖了，气</li>
-						</ul>
-					</section>
-
-				<!-- Copyright -->
-					<ul id="copyright">
-						<li>&copy; 版权归小组成员所有.</li><li>Design: WYJ</li>
-					</ul>
+			<div id="prize-set" style="z-index: 0;position: absolute;left: 5%">
+				<button class="button" style="background-color: #1fcaa7;height: auto ">+</button>
+				<button class="button" style="background-color: #1fcaa7;height: auto ">+</button>
+				<button class="button" style="background-color: #1fcaa7;height: auto ">+</button>
 			</div>
-
-		<!-- Scripts -->
-			<script src="../../assets/js/jquery.min.js"></script>
-			<script src="../../assets/js/skel.min.js"></script>
-			<script src="../../assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="../../assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="../../assets/js/hall_main.js"></script>
-			<script src="../../assets/js/setting.js"></script>
-
+			<div id="style-theme" class="input-field col s6" style="z-index: 2;position: absolute;left: 5%">
+				<form id="lottery_form" name="form">
+					<label for="select_form"></label>
+					<select id="select_form" style="display: inline">
+						<option value="随机抽奖">随机抽奖</option>
+						<option value="转盘抽奖">转盘抽奖</option>
+					</select>
+				</form>
+				<button class="button" id="load_imag">导入背景图片</button>
+			</div>
+			<div id="start_lottery" style="z-index: 3;position: absolute;left: 5%;">
+				<button class="button" id="start">开始抽奖</button>
+			</div>
+		</div>
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/skel.min.js"></script>
+		<script src="../../assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="../../assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="../../assets/js/login_main.js"></script>
+		<script src="../../assets/js/setting.js"></script>
 	</body>
 </html>
