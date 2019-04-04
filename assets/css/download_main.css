@@ -4152,7 +4152,8 @@
 
 	/*location*/
 	#homePage{
-		position: relative;
-		left: 600px;
-		top: -200px;
+		/*position: relative;*/
+		/*left: 600px;*/
+		/*top: -200px;*/
+		right: 10px;
 	}
